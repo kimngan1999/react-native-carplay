@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "deps:check": "yarn dlx npm-check-updates@latest --deep --mergeConfig",
+    "deps:update": "yarn dlx npm-check-updates@latest -u --deep --mergeConfig",
+    "check:install": "yarn dlx @yarnpkg/doctor@3.1.4 ."
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ]
+  },
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
+  "packageManager": "yarn@3.5.0"
+}
